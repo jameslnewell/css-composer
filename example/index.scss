@@ -1,15 +1,5 @@
 @import "./titles.scss";
 
-$color: red;
-
 .hero {
-
-  @include breakpoint('xs') {
-    color: red;
-  }
-
-  &__title {
-    @include title(1);
-  }
-
+  padding: 2em;
 }

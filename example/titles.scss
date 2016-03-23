@@ -1,10 +1,5 @@
+@import "./dicons";
 
-@mixin title($size, $color: #333) {
-  font-size: ($size - 7)*10px;
-}
-
-@mixin breakpoint() {
-  @media (max-width: 400px) {
-    @content;
-  }
+.title {
+  color: red;
 }
