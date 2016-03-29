@@ -2,12 +2,13 @@
   "name": "css-composer",
   "version": "1.0.0",
   "dependencies": {
+    "chalk": "^1.1.1",
     "postcss-calc-function": "^1.1.0",
     "postcss-conditionals": "^2.0.2",
-    "postcss-import": "^8.0.2",
     "postcss-inline-comment": "^2.0.0",
     "postcss-nested": "^1.0.0",
     "postcss-sassy-mixins": "^2.0.0",
+    "postcss-value-parser": "^3.3.0",
     "resolve": "^1.1.7"
   },
   "scripts": {

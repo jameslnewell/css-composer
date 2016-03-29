@@ -1,0 +1,10 @@
+
+@mixin icon($glyph) {
+
+  color: $title-color;
+
+  &:after {
+    content: $glyph;
+  }
+
+}

@@ -1,5 +1,27 @@
-@import "./titles.scss";
+
+$title-color: red;
+
+@import "./lib/titles";
 
 .hero {
   padding: 2em;
+
+  &__title {
+    font-size: ems(12px);
+    /*@include ems('xs') {
+      @if (true) {
+        color: red;
+      } @else if (true) {
+        color: blue;
+      } @else {
+        color: green;
+      }
+      color: red;
+    }*/
+  }
+
+  &__icon {
+    @include icon(person);
+  }
+
 }
