@@ -1,12 +1,11 @@
 'use strict';
 const fs = require('fs');
 const chalk = require('chalk');
-const composer = require('..');
+const compose = require('..');
 
 const file = process.argv[2];
 
-composer()
-  .process(fs.readFileSync(file), {from: file})
+compose(file, fs.readFileSync(file))
   .then(
     result => {
 
