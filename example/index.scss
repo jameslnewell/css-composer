@@ -3,7 +3,7 @@
 $title-color: red;
 
 @import "./lib/titles";
-//@import "./lib/function";
+@import "./lib/function";
 
 .hero {
   padding: 2em;

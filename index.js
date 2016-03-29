@@ -2,13 +2,14 @@
 const postcss = require('postcss');
 const parser = require('postcss-scss');
 
-const cssImport = require('./lib/postcss-import-plugin');
+const cssImport = require('./lib/postcss-node-import');
 const cssStripInlineComments = require('postcss-strip-inline-comments');
 const cssVariables = require('postcss-simple-vars');
 const cssConditionals = require('postcss-conditionals');
 const cssMixins = require('postcss-sassy-mixins');
 const cssNested = require('postcss-nested');
 const cssCalc = require('postcss-calc-function').default;
+const cssFunctions = require('./lib/postcss-scss-function');
 
 module.exports = function(file, contents) {
 
@@ -22,11 +23,12 @@ module.exports = function(file, contents) {
       }
     }}),
     cssStripInlineComments(),
-    cssMixins(),
-    cssVariables(),
-    cssConditionals(),
-    cssNested(),
-    cssCalc()
+    cssFunctions(),
+    //cssMixins(),
+    //cssVariables(),
+    //cssConditionals(),
+    //cssNested(),
+    //cssCalc()
   ]);
 
   return processor.process(contents, {from: file, parser});
